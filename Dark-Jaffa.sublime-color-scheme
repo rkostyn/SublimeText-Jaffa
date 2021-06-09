@@ -1,0 +1,103 @@
+{
+    "name": "Dark Jaffa",
+    "variables":
+    {
+        "red": "hsla(350, 100%, 45%, 1)",
+        "grey": "hsla(0, 0%, 15%, 1)",
+        "blue": "hsla(195, 100%, 75%, 1)",
+        "green": "hsla(115, 100%, 25%, 1)",
+        "purple": "hsla(300, 100%, 50%, 1)",
+        "orange_primary": "hsla(20, 100%, 50%, 1)",
+        "orange_variant": "color(var(orange_primary) s(- 75%) a(0.50))",
+        "yellow_secondary": "hsla(54, 100%, 50%, 1)",
+        "yellow_variant": "color(var(yellow_secondary) s(- 75%)"
+    },
+    "globals":
+    {
+        "background": "var(grey)",
+        "foreground": "var(orange_primary)",
+        "caret": "var(orange_primary)",
+        "line_highlight": "var(orange_variant)",
+        "selection": "var(orange_variant)",
+        "gutter": "var(grey)"
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "var(red)",
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "var(purple)"
+        },
+        {
+            "name": "Constants",
+            "scope": "constant.language, constant.other, constant.character",
+            "foreground": "var(purple)",
+            "font_style": "italic",
+        },
+        {
+            "name": "Entity Name",
+            "scope": "entity.name",
+            "foreground": "var(orange_primary)"
+        },
+        {            
+            "name": "Inherited Class",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(yellow_secondary)"
+        },
+        {            
+            "name": "Name Tag",
+            "scope": "entity.name.section",
+            "foreground": "var(yellow_secondary)"
+        },
+        {            
+            "name": "Attribute Name",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(yellow_secondary)"
+        },
+        {            
+            "name": "Variable",
+            "scope": "variable",
+            "foreground": "var(yellow_secondary)"
+        },
+        {            
+            "name": "Storage Type",
+            "scope": "storage.type",
+            "foreground": "var(blue)"
+        },
+        {            
+            "name": "Storage Modifier",
+            "scope": "storage.modifier",
+            "foreground": "var(yellow_secondary)"
+        },
+        {            
+            "name": "Keyword",
+            "scope": "keyword",
+            "foreground": "var(blue)"
+        },
+        {            
+            "name": "Keyword Control",
+            "scope": "keyword.control",
+            "foreground": "var(blue)"
+        },
+        {            
+            "name": "Keyword Operator",
+            "scope": "keyword.operator",
+            "foreground": "var(orange_primary)"
+        },
+        {            
+            "name": "Keyword Declaration",
+            "scope": "keyword.declaration",
+            "foreground": "var(yellow_secondary)"
+        }
+    ]
+}

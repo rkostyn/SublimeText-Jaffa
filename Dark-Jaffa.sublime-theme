@@ -1,0 +1,48 @@
+{
+    "name": "Dark Jaffa",
+    "variables":
+    {
+        "red": "hsla(350, 100%, 45%, 1)",
+        "grey": "hsla(0, 0%, 15%, 1)",
+        "blue": "hsla(195, 100%, 75%, 1)",
+        "green": "hsla(115, 100%, 25%, 1)",
+        "purple": "hsla(300, 100%, 50%, 1)",
+        "orange_primary": "hsla(20, 100%, 50%, 1)",
+        "orange_variant": "color(var(orange_primary) s(- 75%) a(0.50))",
+        "yellow_secondary": "hsla(54, 100%, 50%, 1)",
+        "yellow_variant": "color(var(yellow_secondary) s(- 75%)"
+    },
+    "rules": [
+        // Set up the textures for a button
+        {
+            "class": "button_control",
+            "layer0.tint": "#000",
+            "layer0.opacity": 1.0,
+            "layer1.texture": "Theme - Example/textures/button_background.png",
+            "layer1.inner_margin": 4,
+            "layer1.opacity": 1.0,
+            "layer2.texture": "Theme - Example/textures/button_highlight.png",
+            "layer2.inner_margin": 4,
+            "layer2.opacity": 0.0,
+            "content_margin": [4, 8, 4, 8]
+        },
+        // Show the highlight texture when the button is hovered
+        {
+            "class": "button_control",
+            "attributes": ["hover"],
+            "layer2.opacity": 1.0
+        },
+        // Basic text label style
+        {
+            "class": "label_control",
+            "fg": "var(grey)",
+            "font.bold": true
+        },
+        // Brighten labels contained in a button on hover
+        {
+            "class": "label_control",
+            "parents": [{"class": "button_control", "attributes": ["hover"]}],
+            "fg": "white"
+        }
+    ]
+}
